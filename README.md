@@ -59,7 +59,7 @@ Add the following line to your /etc/hosts file:
 
     127.0.0.1     ci-demo.my-pc.lan
 
-### Create developement config files
+### Create development config files
 
 You can change the default configuration by copying the config files you want to override from
 
@@ -67,7 +67,7 @@ You can change the default configuration by copying the config files you want to
 
 to
 
-    application/config/developement/
+    application/config/development/
 
 and changing the values as you like.
 
@@ -82,3 +82,12 @@ You can import the file using your favourite database administration too (like P
 ```bash
     $ mysql -u username -p database_name < ci-demo.sql
 ```
+
+## Usage
+
+After successful login, the user is redirected to a page (```/demo/show```) listing all users from the ```users``` table.
+
+The page ```/demo/show/[USER_ID]``` shows the data of a single  user. This page can be opened by clicking the ID a user on the list page.
+One can return to the previous page by clicking on the link ```Back to table...```, right below the page title.
+
+Users can log out using the ```Logout``` link in the top right corner of the page.
