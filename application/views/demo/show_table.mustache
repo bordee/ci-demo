@@ -1,0 +1,18 @@
+{{> default_header }}
+        <div id="body">
+            <table class="table-dump">
+                <tr>
+                    <th>ID</th>
+                    <th>First name:</th>
+                    <th>Last name:</th>
+                </tr>
+            {{#user}}
+                <tr>
+                    <td><a href="/demo/show/{{id}}">{{id}}</a></td>
+                    <td>{{firstname}}</td>
+                    <td>{{lastname}}</td>
+                </tr>
+            {{/user}}
+            </table>
+	</div>
+{{> default_footer }}
