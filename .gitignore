@@ -1,6 +1,14 @@
-*/config/development
+*~
+*.lock
+*.iml
+nbproject
+.idea
+
+*/config/development/*.php
 */logs/log-*.php
 !*/logs/index.html
 */cache/*
 !*/cache/index.html
 !*/cache/.htaccess
+
+vendor/*
