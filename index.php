@@ -36,6 +36,11 @@
  * @filesource
  */
 
+define('PROJECT_ROOT', dirname(__FILE__) . '/');
+define('APPLICATION_FOLDER', PROJECT_ROOT . 'application/');
+define('CODEIGNITER_MODULE_PATH', PROJECT_ROOT . 'vendor/codeigniter/framework/');
+define('COMPOSER_AUTOLOAD', PROJECT_ROOT . 'vendor/autoload.php');
+
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
@@ -97,7 +102,7 @@ switch (ENVIRONMENT)
  * This variable must contain the name of your "system" directory.
  * Set the path if it is not in the same directory as this file.
  */
-	$system_path = 'system';
+	$system_path = CODEIGNITER_MODULE_PATH . 'system';
 
 /*
  *---------------------------------------------------------------
@@ -114,7 +119,7 @@ switch (ENVIRONMENT)
  *
  * NO TRAILING SLASH!
  */
-	$application_folder = 'application';
+	$application_folder = rtrim(APPLICATION_FOLDER, '/');
 
 /*
  *---------------------------------------------------------------
