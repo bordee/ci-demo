@@ -1,0 +1,33 @@
+{
+    "description": "CodeIgniter demo page",
+    "name": "bordee/ci-demo",
+    "config": {
+        "vendor-dir": "vendor",
+        "bin-dir": "bin",
+        "prepend-autoloader": false
+    },
+    "require": {
+        "php": ">=5.5",
+        "codeigniter/framework": "3.1.2",
+        "mustache/mustache": "2.11.1",
+        "bordee/ci-model": "master@dev",
+        "bordee/php-utils": "master@dev"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/bordee/ci-model.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/bordee/php-utils.git"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CiModel\\": "vendor/bordee/ci-model/src/CiModel",
+            "Utils\\": "vendor/bordee/php-utils/src/Utils",
+            "CiDemo\\": "src/CiDemo"
+        }
+    }
+}
